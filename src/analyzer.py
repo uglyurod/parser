@@ -104,6 +104,7 @@ class Analyzer:
         with pd.option_context("display.max_rows", None, "display.max_columns", None):
             print(df[df["Salary"]][["Employer", "From", "To", "Experience"]][0:15])
         # Save to file
+        self.save_csv = True
         if self.save_csv:
             print("\n\n[INFO]: Save dataframe to file...")
             df.to_csv(rf"hh_results.csv", index=False)
